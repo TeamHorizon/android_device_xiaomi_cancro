@@ -98,7 +98,7 @@ int loc_eng_nmea_put_checksum(char *pNmea, int maxSize)
 
     // total length of nmea sentence is length of nmea sentence inc $ sign plus
     // length of checksum (+1 is to cover the $ character in the length).
-	return (length + checksumLength + 1);
+    return (length + checksumLength + 1);
 }
 
 /*===========================================================================
