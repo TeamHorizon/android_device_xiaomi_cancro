@@ -163,7 +163,7 @@ static char *camera_fixup_setparams(int id, const char *settings)
         params.set(KEY_QC_MORPHO_HDR, "true");
         params.set(android::CameraParameters::KEY_FLASH_MODE, android::CameraParameters::FLASH_MODE_OFF);
         params.set("ae-bracket-hdr", "AE-Bracket");
-        params.set("capture-burst-exposures", "-6,8,0");
+        params.set("capture-burst-exposures", "-10,0,10");
 
         // enable ZSL only when HDR is on, otherwise some camera apps will break
         /*params.set("zsl", "on");
