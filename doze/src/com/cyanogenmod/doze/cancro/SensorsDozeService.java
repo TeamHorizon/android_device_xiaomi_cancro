@@ -33,10 +33,11 @@ import android.os.UserHandle;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import cyanogenmod.providers.CMSettings;
 
 public class SensorsDozeService extends Service {
 
-    public static final boolean DEBUG = true;//false;
+    public static final boolean DEBUG = false;
     public static final String TAG = "SensorsDozeService";
 
     private static final String DOZE_INTENT = "com.android.systemui.doze.pulse";
@@ -347,6 +348,9 @@ public class SensorsDozeService extends Service {
                 Context.AUDIO_SERVICE);
         Vibrator vibrator = (Vibrator) mContext.getSystemService(
                 Context.VIBRATOR_SERVICE);
+	
+	boolean enabled = CMSettings.System.getInt(mContext.getContentResolver(),		
+                CMSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK, 1) != 0;
 
         switch (audioManager.getRingerMode()) {
             case AudioManager.RINGER_MODE_SILENT:
@@ -354,7 +358,9 @@ public class SensorsDozeService extends Service {
             case AudioManager.RINGER_MODE_VIBRATE:
             case AudioManager.RINGER_MODE_NORMAL:
             default:
-                vibrator.vibrate(VIBRATOR_ACKNOWLEDGE);
+        if (enabled){
+        vibrator.vibrate(VIBRATOR_ACKNOWLEDGE);
+	}
                 break;
         }
     }
