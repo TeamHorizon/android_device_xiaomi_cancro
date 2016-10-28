@@ -1,14 +1,12 @@
 [
   {
-    "remote": "th",
-    "repository": "android_kernel_xiaomi_cancro",
+    "repository": "TeamHorizon/android_kernel_xiaomi_cancro",
     "target_path": "kernel/xiaomi/cancro",
-    "revision": "n"
+    "branch": "n"
   },
   {
-    "remote": "th",
-    "repository": "proprietary_vendor_xiaomi",
+    "repository": "TeamHorizon/proprietary_vendor_xiaomi",
     "target_path": "vendor/xiaomi",
-    "revision": "n"
+    "branch": "n"
   }
 ]
