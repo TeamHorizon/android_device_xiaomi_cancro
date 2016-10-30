@@ -116,13 +116,19 @@ static char *camera_fixup_getparams(int id __attribute__((unused)),
     params.dump();
 #endif
 
-	params.set("preview-fps-range-values", "(7500,30000),(8000,30000),(30000,30000)");
-	params.set("preview-fps-range", "30000,30000");
+	params.set("preview-fps-range-values", "(7500,30000),(8000,30000),(30000,30000),(30000,60000)");
+	params.set("preview-fps-range", "30000,60000");
 	if (id == REAR_CAMERA_ID) {
         params.set(android::CameraParameters::KEY_SUPPORTED_SCENE_MODES, supportedSceneModes);
 	params.set("min-focus-pos-index", "0");
         params.set("max-focus-pos-index", "100");
 	params.set("focus-distances", "0.10,1.20,Infinity");
+	params.set("contrast", "7");
+	params.set("saturation", "7");
+	params.set("sharpness", "24");
+	params.set("jpeg-quality", "95");
+	params.set("qc-camera-features", "29823");
+	params.set("min-focus-pos-dac", "1023");	
 	}
 #if !LOG_NDEBUG
     ALOGV("%s: Fixed parameters:", __FUNCTION__);
