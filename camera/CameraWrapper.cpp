@@ -123,6 +123,7 @@ static char *camera_fixup_getparams(int id __attribute__((unused)),
 	params.set("min-focus-pos-index", "0");
         params.set("max-focus-pos-index", "100");
 	params.set("focus-distances", "0.10,1.20,Infinity");
+	params.set("min-focus-pos-dac", "1023");
 	}
 #if !LOG_NDEBUG
     ALOGV("%s: Fixed parameters:", __FUNCTION__);
