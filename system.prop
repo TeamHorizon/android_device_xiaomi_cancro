@@ -56,6 +56,9 @@ use.voice.path.for.pcm.voip=true
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
 persist.audio.fluence.speaker=false
+audio.offload.pcm.16bit.enable=true
+audio.offload.pcm.24bit.enable=true
+audio.deep_buffer.media=true
 af.fast_track_multiplier=1
 audio_hal.period_size=192
 
