@@ -114,9 +114,15 @@ void vendor_load_properties()
     switch (raw_id) {
         case 1978:
             property_set("ro.product.model", "MI 3W");
+            property_set("ro.bt.name", "MI 3W");
+            property_set("ro.hotspot.name", "MI 3W");
+            property_set("ro.direct.name", "MI 3W");
             break;
         case 1974:
             property_set("ro.product.model", "MI 4");
+            property_set("ro.bt.name", "MI 4");
+            property_set("ro.hotspot.name", "MI 4");
+            property_set("ro.direct.name", "MI 4");
             break;
 	case 1973:
             property_set("ro.product.model", "MI 4CDMA");
