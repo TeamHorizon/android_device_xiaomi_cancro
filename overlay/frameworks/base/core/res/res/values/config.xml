@@ -313,7 +313,7 @@
     <integer name="config_screenBrightnessDoze">10</integer>
     <bool name="config_dozeAfterScreenOff">true</bool>
     <bool name="config_allowAutoBrightnessWhileDozing">true</bool>
-    <add-resource type="bool" name="doze_display_state_supported">true</add-resource>
+    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
 
     <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
     <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
