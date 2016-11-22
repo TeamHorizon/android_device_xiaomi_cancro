@@ -342,6 +342,7 @@ vendor/lib/libFaceDeform.so
 vendor/lib/libFaceProc.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
+vendor/lib/libflp.so
 vendor/lib/libgeofence.so
 vendor/lib/libHevcSwDecoder.so
 vendor/lib/libI420colorconvert.so
