@@ -124,7 +124,7 @@ public class OrientationSensor implements SensorEventListener {
     }
 
     public void enable() {
-        if (!mEnabled) {
+        if (!mEnabled && mAccelerometerSensor != null && mMagneticFieldSensor != null) {
             reset();
             mState = ORIENTATION_UNKNOWN;
             mSensorManager.registerListener(this, mAccelerometerSensor,
@@ -142,7 +142,7 @@ public class OrientationSensor implements SensorEventListener {
     }
 
     public void disable() {
-        if (mEnabled) {
+        if (mEnabled && mAccelerometerSensor != null && mMagneticFieldSensor != null) {
             mSensorManager.unregisterListener(this,mAccelerometerSensor);
             mSensorManager.unregisterListener(this, mMagneticFieldSensor);
             mEnabled = false;
