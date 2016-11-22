@@ -29,8 +29,8 @@ public class OrientationSensor implements SensorEventListener {
     public static final int ORIENTATION_FACE_UP = 2;
     public static final int ORIENTATION_VERTICAL = 3;
 
-    private static final int ORIENTATION_DELAY = 60 * 1000;
-    private static final int ORIENTATION_LATENCY = 0;
+    private static final int ORIENTATION_DELAY = 50 * 1000;
+    private static final int ORIENTATION_LATENCY = 100 * 1000;
     private static final float MATH_PI_1_4 = 0.785398F;
     private static final float MATH_PI_3_4 = 2.35619F;
 

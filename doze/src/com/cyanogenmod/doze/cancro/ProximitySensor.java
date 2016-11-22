@@ -24,7 +24,7 @@ import android.hardware.SensorManager;
 
 public class ProximitySensor implements SensorEventListener {
 
-    private static final int PROXIMITY_DELAY = 1000 * 1000;
+    private static final int PROXIMITY_DELAY = 50 * 1000;
     private static final int PROXIMITY_LATENCY = 100 * 1000;
 
     private boolean mEnabled;

@@ -28,7 +28,7 @@ public class PickUpSensor implements SensorEventListener {
     public static final int PICK_UP_FALSE = 1;
     public static final int PICK_UP_TRUE = 2;
 
-    private static final int PICKUP_DELAY = 500 * 1000;
+    private static final int PICKUP_DELAY = 50 * 1000;
     private static final int PICKUP_LATENCY = 100 * 1000;
     private static final float PICK_UP_SAFEZONE = 5;
     private static final float PICK_UP_THRESHOLD = 6;
