@@ -130,7 +130,12 @@ void vendor_load_properties()
         case 1972:
             property_set("ro.product.model", "MI 4LTE");
             property_set("ro.product.name", "cancro_wc_lte");
-            break;
+            property_set("ro.bt.name", "MI 4LTE");
+            property_set("ro.hotspot.name", "MI 4LTE");
+            property_set("ro.direct.name", "MI 4LTE");
+	    property_set("ro.telephony.default_network", "8");
+            property_set("telephony.lteOnGSMDevice", "1");
+	break;
         default:
             // Other unsupported variants
             property_set("ro.product.model", "Unsupported MI Cancro");
