@@ -188,6 +188,9 @@ PRODUCT_PACKAGES += \
     mke2fs_static \
     resize2fs_static
 
+PRODUCT_PACKAGES += \
+	XiaomiDoze
+
 # Graphics
 PRODUCT_PACKAGES += \
     copybit.msm8974 \
