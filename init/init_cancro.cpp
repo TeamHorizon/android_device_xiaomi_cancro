@@ -69,19 +69,18 @@ static int read_file2(const char *fname, char *data, int max_size)
     return 1;
 }
 
-void property_override(char const prop[], char const value[])
+void property_override(char const system_prop[], char const value[])
 {
     prop_info *pi;
 
-    pi = (prop_info*) __system_property_find(prop);
+    pi = (prop_info*) __system_property_find(system_prop);
     if (pi)
         __system_property_update(pi, value, strlen(value));
     else
-        __system_property_add(prop, strlen(prop), value, strlen(value));
+        __system_property_add(system_prop, strlen(system_prop), value, strlen(value));
 }
 
-void property_override_dual(char const system_prop[],
-        char const vendor_prop[], char const value[])
+void property_override_dual(char const system_prop[], char const vendor_prop[], char const value[])
 {
     property_override(system_prop, value);
     property_override(vendor_prop, value);
@@ -128,8 +127,8 @@ void vendor_load_properties()
 
     property_override_dual("ro.product.device", "ro.vendor.product.device", "cancro");
     property_override_dual("ro.product.name", "ro.vendor.product.name", "cancro");
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "Xiaomi/cancro/cancro:6.0.1/MMB29M/V8.1.6.0.MXDMIDI:user/release-keys");
-    property_override("ro.build.description", "cancro-user 6.0.1 MMB29M V8.1.6.0.MXDMIDI release-keys");
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "Xiaomi/cancro/cancro:6.0.1/MMB29M/V9.5.3.0.MXDCNFA:user/release-keys");
+    property_override("ro.build.description", "cancro-user 6.0.1 MMB29M V9.5.3.0.MXDCNFA release-keys");
 
     switch (raw_id) {
         case 1978:
@@ -139,13 +138,13 @@ void vendor_load_properties()
         case 1974:
             property_override_dual("ro.product.model", "ro.vendor.product.model", "MI 4");
             break;
-        case 1973:
-            property_override_dual("ro.product.model", "MI 4CDMA");
+	case 1973:
+            property_override_dual("ro.product.model", "ro.vendor.product.model", "MI 4CDMA");
             break;
         case 1972:
             property_override_dual("ro.product.model", "ro.vendor.product.model", "MI 4LTE");
-            property_set("ro.telephony.default_network", "8");
-            property_set("telephony.lteOnGSMDevice", "1");
+            property_set("ro.telephony.default_network", "9");
+            property_set("telephony.lteOnCdmaDevice", "1");
             break;
         default:
             // Other unsupported variants
