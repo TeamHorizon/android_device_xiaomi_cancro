@@ -200,6 +200,9 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 # Remove secdiscard command
 TARGET_REMOVE_SECDISCARD_COMMAND := true
 
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
   ifeq ($(TARGET_BUILD_VARIANT),user)
