@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.lineage.hardware;
+package org.lineageos.hardware;
 
-import org.lineage.internal.util.FileUtils;
+import org.lineageos.internal.util.FileUtils;
 
 import java.io.File;
 /*
