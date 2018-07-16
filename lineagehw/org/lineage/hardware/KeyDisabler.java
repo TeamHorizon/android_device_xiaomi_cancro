@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.mokee.hardware;
+package org.lineage.hardware;
 
-import org.mokee.internal.util.FileUtils;
+import org.lineage.internal.util.FileUtils;
 
 import java.io.File;
 /*
