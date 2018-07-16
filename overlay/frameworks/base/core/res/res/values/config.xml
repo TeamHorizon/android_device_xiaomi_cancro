@@ -296,6 +296,14 @@
     
     <!-- Disable wakeup during Netwoek Sampling -->
     <bool name="config_networkSamplingWakesDevice">false</bool>
+
+    <!-- Boolean indicating whether we want button brightness support -->
+    <bool name="config_button_brightness_support">true</bool>
+
+    <!-- Buttons brightness -->
+    <integer name="config_buttonBrightnessSettingDefault">155</integer>
+    <bool name="config_deviceHasVariableButtonBrightness">true</bool>
+    <bool name="config_deviceHasButtonBacklight">true</bool>
     
     <!-- Keep chosen default camera app pinned in memory for faster launching -->
     <bool name="config_pinnerCameraApp">true</bool>
