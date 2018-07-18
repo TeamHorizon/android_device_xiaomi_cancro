@@ -1,0 +1,2 @@
+#============= mediametrics ==============
+allow mediametrics sysfs:file { getattr open read };

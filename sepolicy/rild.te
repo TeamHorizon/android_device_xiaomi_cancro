@@ -1,2 +1,6 @@
 #============= rild ==============
+allow rild qcril_device:dir rw_dir_perms;
+allow rild qcril_device:file create_file_perms;
+allow rild radio_data_file:dir search;
 allow rild zygote_exec:file execute;
+allow rild sysfs:file write;

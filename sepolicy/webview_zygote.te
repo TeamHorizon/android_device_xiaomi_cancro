@@ -1,0 +1,2 @@
+#============= webview_zygote ==============
+allow webview_zygote sysfs:file { getattr open read };

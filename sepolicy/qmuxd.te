@@ -1,2 +1,3 @@
 #============= qmuxd ==============
 allow qmuxd diag_device:chr_file { open read write };
+allow qmuxd sysfs:file { getattr read };

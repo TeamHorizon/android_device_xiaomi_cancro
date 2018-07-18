@@ -1,7 +1,9 @@
 #============= init ==============
 allow init debugfs:file write;
 allow init device:chr_file { create unlink };
+allow init vfat:dir mounton;
 allow init firmware_file:dir mounton;
 allow init sensors_device:chr_file getattr;
 allow init sensors_socket:sock_file write;
 allow init sensors:unix_stream_socket connectto;
+allow init system_data_file:chr_file getattr;

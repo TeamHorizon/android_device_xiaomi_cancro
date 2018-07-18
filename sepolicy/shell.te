@@ -1,3 +1,19 @@
 #============= shell ==============
 allow shell init_exec:file getattr;
 allow shell sysfs_graphics:file getattr;
+allow shell sysfs:file { getattr open read };
+allow shell bg_boot_complete_prop:file { getattr open };
+allow shell bg_daemon_prop:file { getattr open };
+allow shell boot_mode_prop:file open;
+allow shell nfc_nq_prop:file { getattr open };
+allow shell per_mgr_state_prop:file { getattr open };
+allow shell qcom_ims_prop:file { getattr open };
+allow shell qdma_prop:file { getattr open };
+allow shell spcomlib_prop:file { getattr open };
+allow shell sys_usb_configfs_prop:file { getattr open };
+allow shell sys_usb_controller_prop:file { getattr open };
+allow shell sys_usb_tethering_prop:file { getattr open };
+allow shell uicc_prop:file { getattr open };
+allow shell vendor_rild_libpath_prop:file { getattr open };
+allow shell wcnss_prop:file { getattr open };
+allow shell wififtmd_prop:file { getattr open };

@@ -15,3 +15,7 @@
 /sys/bus/i2c/drivers/atmel_mxt_ts_640t/2-004b/sensitive_mode u:object_r:display_sysfs:s0
 /sys/bus/i2c/drivers/atmel_mxt_ts/2-004a/stylus              u:object_r:display_sysfs:s0
 /sys/bus/i2c/drivers/atmel_mxt_ts_640t/2-004b/stylus         u:object_r:display_sysfs:s0
+
+# Device nodes
+/dev/radio                                                   u:object_r:qcril_device:s0
+/dev/rfkill                                                  u:object_r:rfkill_device:s0

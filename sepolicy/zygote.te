@@ -1,0 +1,2 @@
+#============= zygote ==============
+#allow zygote debugfs:file { getattr open write };

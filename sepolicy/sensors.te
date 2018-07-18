@@ -8,3 +8,5 @@ allow sensors persist_misc_file:file { getattr open read setattr write };
 allow sensors property_socket:sock_file write;
 allow sensors system_data_file:file open;
 allow sensors system_prop:property_service set;
+#allow sensors default_prop:property_service set;
+allow sensors sysfs:file { append getattr open read };

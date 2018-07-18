@@ -1,3 +1,5 @@
+#============= bdaddr ==============
+allow bdaddr self:socket { create read write };
 type bdaddr, domain;
 type bdaddr_exec, exec_type, file_type;
 
@@ -15,3 +17,5 @@ allow bdaddr diag_device:chr_file rw_file_perms;
 allow bdaddr self:capability { fsetid dac_override };
 
 allow bdaddr smem_log_device:chr_file rw_file_perms;
+#allow bdaddr vendor_file:file entrypoint;
+allow bdaddr sysfs:file { getattr open read };

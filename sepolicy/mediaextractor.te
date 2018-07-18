@@ -1,0 +1,2 @@
+#============= mediaextractor ==============
+allow mediaextractor sysfs:file { getattr open read };

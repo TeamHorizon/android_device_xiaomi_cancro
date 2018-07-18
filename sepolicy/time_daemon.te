@@ -1,0 +1,2 @@
+#============= time_daemon ==============
+allow time_daemon sysfs:file { read getattr open };
