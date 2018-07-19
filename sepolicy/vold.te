@@ -1,2 +1,2 @@
 #============= vold ==============
-allow vold system_data_file:file open;
+allow vold system_data_file:file { open ioctl unlink };
